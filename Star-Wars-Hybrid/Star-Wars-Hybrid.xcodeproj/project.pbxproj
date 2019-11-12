@@ -70,8 +70,7 @@
 				BD101029237A40BE002426B7 /* SceneDelegate.m */,
 				BD10103E237A411F002426B7 /* Main.storyboard */,
 				BD101046237A42D2002426B7 /* Model */,
-				BD101040237A4130002426B7 /* LSIPersonSearchTableViewController.h */,
-				BD101041237A4130002426B7 /* LSIPersonSearchTableViewController.m */,
+				BD101047237A4374002426B7 /* Search TableView */,
 				BD101031237A40C0002426B7 /* Assets.xcassets */,
 				BD101033237A40C0002426B7 /* LaunchScreen.storyboard */,
 				BD101036237A40C0002426B7 /* Info.plist */,
@@ -87,6 +86,15 @@
 				BD101043237A42C9002426B7 /* LSIPerson.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BD101047237A4374002426B7 /* Search TableView */ = {
+			isa = PBXGroup;
+			children = (
+				BD101040237A4130002426B7 /* LSIPersonSearchTableViewController.h */,
+				BD101041237A4130002426B7 /* LSIPersonSearchTableViewController.m */,
+			);
+			path = "Search TableView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
