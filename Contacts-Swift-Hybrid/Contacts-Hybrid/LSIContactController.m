@@ -9,17 +9,27 @@
 #import "LSIContactController.h"
 #import "Contacts_Hybrid-Swift.h" // "ProjectName-Swift.h" Spaces/Special characters = "_"
 
+@interface LSIContactController ()
+
+@property (nonatomic) NSMutableArray *internalContacts;
+
+@end
+
 @implementation LSIContactController
 
 - (instancetype) init {
-    self = [super init];
-    if (self) {
-        _contacts = @[
-            [[Contact alloc] initWithName:@"Vici" relationship:@"Myself"],
-            [[Contact alloc] initWithName:@"Robin" relationship:@"Spouse"]
-        ];
+    if (self = [super init]) {
+        _internalContacts = [[NSMutableArray alloc] init];
+        
+        Contact *contact = [[Contact alloc] initWithName:@"Vici" relationship:@"Myself"];
+        [_internalContacts addObject:contact];
     }
     return self;
+}
+
+- (NSArray *)contacts
+{
+    return _internalContacts.copy;
 }
 
 @end

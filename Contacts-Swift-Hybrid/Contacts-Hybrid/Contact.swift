@@ -16,7 +16,7 @@ import Foundation
 // BUG: Going from Swift to Objective-C to Swift seems to cause problems with renaming the build symbol
 
 @objc
-class Contact: NSObject{
+class Contact: NSObject {
     @objc var name: String
     @objc var relationship: String?
     

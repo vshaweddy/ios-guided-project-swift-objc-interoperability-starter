@@ -11,7 +11,7 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
     
-    let contactsController = LSIContactController()
+    let contactsController = ContactsController()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -24,7 +24,6 @@ class ContactsTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-		
         return contactsController.contacts.count
 	}
 	

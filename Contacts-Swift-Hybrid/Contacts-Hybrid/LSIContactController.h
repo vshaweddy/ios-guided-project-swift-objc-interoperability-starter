@@ -17,7 +17,7 @@ NS_SWIFT_NAME(ContactsController)
 // lightweight generics
 // nullability
 // chaange names of classes
-@property (nonatomic, readonly, nonnull) NSArray<Contact *> *contacts;
+@property (nonatomic, readonly, copy) NSArray<Contact *> *contacts;
 /*
  * nullable - optional in Swift (nil or value)
  [Contact]?
