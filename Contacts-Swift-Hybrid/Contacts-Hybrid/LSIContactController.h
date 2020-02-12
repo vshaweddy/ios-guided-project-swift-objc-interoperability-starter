@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class Contact; // forward declare the Swift class
-//@class LSIContact;
+//@class LSIContact; // it doesn't work (buggy problem)
 
 NS_SWIFT_NAME(ContactsController)
 @interface LSIContactController : NSObject
