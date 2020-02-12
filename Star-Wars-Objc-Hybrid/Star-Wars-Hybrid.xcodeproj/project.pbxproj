@@ -16,6 +16,7 @@
 		BD101042237A4130002426B7 /* LSIPersonSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD101041237A4130002426B7 /* LSIPersonSearchTableViewController.m */; };
 		BD101045237A42C9002426B7 /* LSIPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = BD101043237A42C9002426B7 /* LSIPerson.m */; };
 		E3B3E0A423F3A988008539C8 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B3E0A323F3A988008539C8 /* PersonController.swift */; };
+		E3B3E0A623F3B319008539C8 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B3E0A523F3B319008539C8 /* PersonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		BD101044237A42C9002426B7 /* LSIPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIPerson.h; sourceTree = "<group>"; };
 		E3B3E0A223F3A988008539C8 /* Star-Wars-Hybrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Star-Wars-Hybrid-Bridging-Header.h"; sourceTree = "<group>"; };
 		E3B3E0A323F3A988008539C8 /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		E3B3E0A523F3B319008539C8 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				BD101040237A4130002426B7 /* LSIPersonSearchTableViewController.h */,
 				BD101041237A4130002426B7 /* LSIPersonSearchTableViewController.m */,
+				E3B3E0A523F3B319008539C8 /* PersonTableViewCell.swift */,
 			);
 			path = "Search TableView";
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				BD10102A237A40BE002426B7 /* SceneDelegate.m in Sources */,
 				BD101042237A4130002426B7 /* LSIPersonSearchTableViewController.m in Sources */,
 				E3B3E0A423F3A988008539C8 /* PersonController.swift in Sources */,
+				E3B3E0A623F3B319008539C8 /* PersonTableViewCell.swift in Sources */,
 				BD101045237A42C9002426B7 /* LSIPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

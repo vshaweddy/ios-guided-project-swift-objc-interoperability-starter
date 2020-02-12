@@ -7,10 +7,12 @@
 //
 
 #import "LSIPersonSearchTableViewController.h"
+#import "Star_Wars_Hybrid-Swift.h"
+#import "LSIPerson.h"
 
 @interface LSIPersonSearchTableViewController () <UISearchBarDelegate>
 
-// TODO: Create a PersonController.swift and make it an instance variable
+@property (nonatomic) NSArray<LSIPerson *> *people;
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
@@ -22,28 +24,35 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-	// TODO: Implement number of rows
+    return self.people.count;
+    
 	
 	return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
 	
-	// TODO: Implement a custom cell named PersonTableViewCell.swift
-	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
+	LSIPersonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
     
-	// TODO: Set the cell to the current Person object
-	
+    LSIPerson *person = [self.people objectAtIndex:indexPath.row];
+    
+    cell.person = person;
 	
     return cell;
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
-	
-	// TODO: Search for a person using the searchBar.text
+//    __weak LSIPersonSearchTableViewController *weakSelf = self;
+
+    [LSIPersonController.sharedController searchForPeopleWithSearchTerm:searchBar.text completionHandler:^(NSArray<LSIPerson *> * _Nullable people, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error searching for %@: %@", searchBar.text, error);
+        }
+        
+        self.people = people;
+        [self.tableView reloadData];
+    }];
     
 	// TODO: Save the result and have the UI update itself
 }
