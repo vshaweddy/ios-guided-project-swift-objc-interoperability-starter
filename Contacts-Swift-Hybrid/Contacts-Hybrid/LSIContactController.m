@@ -7,7 +7,19 @@
 //
 
 #import "LSIContactController.h"
+#import "Contacts_Hybrid-Swift.h" // "ProjectName-Swift.h" Spaces/Special characters = "_"
 
 @implementation LSIContactController
+
+- (instancetype) init {
+    self = [super init];
+    if (self) {
+        _contacts = @[
+            [[Contact alloc] initWithName:@"Vici" relationship:@"Myself"],
+            [[Contact alloc] initWithName:@"Robin" relationship:@"Spouse"]
+        ];
+    }
+    return self;
+}
 
 @end

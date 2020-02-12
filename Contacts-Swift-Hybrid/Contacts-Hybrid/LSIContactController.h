@@ -8,10 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class Contact; // forward declare the Swift class
+//@class LSIContact;
 
+NS_SWIFT_NAME(ContactsController)
 @interface LSIContactController : NSObject
+
+// lightweight generics
+// nullability
+// chaange names of classes
+@property (nonatomic, readonly, nonnull) NSArray<Contact *> *contacts;
+/*
+ * nullable - optional in Swift (nil or value)
+ [Contact]?
+ * nonnul - not an optional (can never be nil)
+ [Contact]
+ * nil-resettable - UITextField.text = nil (Sets the text to "")
+ [Contact]?
+ * nil_unspecified - Default (implicity unwrapped optional)
+ [Contact]!
+ 
+ */
 
 @end
 
-NS_ASSUME_NONNULL_END
