@@ -27,7 +27,7 @@
     return self;
 }
 
-- (NSArray *)contacts
+- (NSArray *)contacts // because it's readonly attribute (check header)
 {
     return _internalContacts.copy;
 }
